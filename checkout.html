@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — NovaCart</title>
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Nova<span>Cart</span></a>
+    <nav aria-label="Primary">
+      <a href="catalog.html">Shop</a>
+      <a href="c/paid-social.html">Deals</a>
+      <a href="about.html">About</a>
+      <a class="cart-link" href="cart.html">Cart <span data-cart-count>0</span></a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / Checkout</p>
+    <h1>Checkout</h1>
+    <div class="banner">Demo only — no payment, no PII stored. Use this page for funnel, UAT and tagging labs (<code>begin_checkout</code> / <code>purchase</code> as <em>concepts</em>).</div>
+    <form class="panel" data-checkout style="max-width:28rem;margin:1.5rem 0 3rem">
+      <p>
+        <label for="email">Email</label><br>
+        <input id="email" name="email" type="email" required style="width:100%;padding:0.5rem">
+      </p>
+      <p>
+        <label for="country">Country</label><br>
+        <select id="country" name="country">
+          <option>France</option>
+          <option>Belgium</option>
+          <option>Netherlands</option>
+          <option>Germany</option>
+        </select>
+      </p>
+      <button class="btn" type="submit">Place order (demo)</button>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> NovaCart · <a href="legal/cookies.html">Cookies</a></p>
+    </div>
+  </footer>
+  <script src="js/store.js" defer></script>
+</body>
+</html>

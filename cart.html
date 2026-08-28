@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart — NovaCart</title>
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Nova<span>Cart</span></a>
+    <nav aria-label="Primary">
+      <a href="catalog.html">Shop</a>
+      <a href="c/paid-social.html">Deals</a>
+      <a href="about.html">About</a>
+      <a class="cart-link" href="cart.html">Cart <span data-cart-count>0</span></a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Cart</p>
+    <h1>Your cart</h1>
+    <p class="meta">Stored in this browser only (<code>localStorage</code>). Nothing is sent to a server.</p>
+    <div data-cart-table></div>
+    <p style="margin:1.5rem 0 3rem"><a class="btn" href="checkout.html">Checkout (demo)</a></p>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span data-year>2026</span> NovaCart · <a href="legal/cookies.html">Cookies</a></p>
+    </div>
+  </footer>
+  <script src="js/store.js" defer></script>
+</body>
+</html>
