@@ -6,7 +6,7 @@ Live (GitHub Pages): **https://marcyves.github.io/novacart/**
 
 ## Why HTML, not React
 
-Students are project managers. They need real URLs (PDP, campaign landing, checkout), a GTM snippet, Lighthouse on two contrasting pages, and a cookie bar they can audit. A SPA build would hide that.
+Students are project managers. They need real URLs (PDP, campaign landing, checkout), Lighthouse on two contrasting pages, and a cookie bar they can audit. A SPA build would hide that.
 
 ## Pages
 
@@ -19,7 +19,7 @@ Students are project managers. They need real URLs (PDP, campaign landing, check
 | `/cart.html` · `/checkout.html` | `localStorage` cart, demo checkout (no payment) |
 | `/legal/cookies.html` | Accept-only bar documented as a QA gap |
 
-Analytics **numbers** for the case still come from the Moodle pack (new domain = no GSC/GA history).
+Analytics **numbers** for the case still come from the Moodle pack. The live site sends hits to instructor GA4 (`G-DFD5LG0TBV` via gtag). GTM can replace gtag later without changing the property.
 
 ## Local
 

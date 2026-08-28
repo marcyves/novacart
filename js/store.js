@@ -28,8 +28,13 @@
     if (found) found.qty += 1;
     else items.push({ sku, name, price: Number(price), qty: 1 });
     writeCart(items);
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: "add_to_cart", sku, name, price: Number(price) });
+    if (typeof gtag === "function") {
+      gtag("event", "add_to_cart", {
+        currency: "EUR",
+        value: Number(price),
+        items: [{ item_id: sku, item_name: name, price: Number(price), quantity: 1 }],
+      });
+    }
   }
 
   function removeItem(sku) {
@@ -116,6 +121,9 @@
   if (checkout) {
     checkout.addEventListener("submit", (e) => {
       e.preventDefault();
+      if (typeof gtag === "function") {
+        gtag("event", "begin_checkout", { currency: "EUR" });
+      }
       alert("Demo checkout — no payment is processed. This page exists for the funnel / QA labs.");
     });
   }
