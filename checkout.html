@@ -4,12 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Checkout — NovaCart</title>
+  <meta name="description" content="NovaCart checkout. Demo only — no payment is taken.">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFD5LG0TBV"></script>
   <script src="js/ga4.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <p class="promo">Free EU shipping from <strong>€50</strong> · 2-year warranty · 30-day returns</p>
   <header class="site-header">
     <a class="brand" href="index.html">Nova<span>Cart</span></a>
     <nav aria-label="Primary">
@@ -22,29 +27,75 @@
   <main id="main" class="wrap">
     <p class="crumbs"><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / Checkout</p>
     <h1>Checkout</h1>
-    <div class="banner">Demo only — no payment, no PII stored. Use this page for funnel, UAT and tagging labs (<code>begin_checkout</code> / <code>purchase</code> as <em>concepts</em>).</div>
-    <form class="panel" data-checkout style="max-width:28rem;margin:1.5rem 0 3rem">
-      <p>
-        <label for="email">Email</label><br>
-        <input id="email" name="email" type="email" required style="width:100%;padding:0.5rem">
-      </p>
-      <p>
-        <label for="country">Country</label><br>
-        <select id="country" name="country">
-          <option>France</option>
-          <option>Belgium</option>
-          <option>Netherlands</option>
-          <option>Germany</option>
-        </select>
-      </p>
-      <button class="btn" type="submit">Place order (demo)</button>
-    </form>
+    <div class="checkout-grid">
+      <form class="panel" data-checkout>
+        <p>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </p>
+        <p>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </p>
+        <p>
+          <label for="address">Address</label>
+          <input id="address" name="address" type="text" required autocomplete="street-address">
+        </p>
+        <p>
+          <label for="country">Country</label>
+          <select id="country" name="country" autocomplete="country-name">
+            <option>France</option>
+            <option>Belgium</option>
+            <option>Netherlands</option>
+            <option>Germany</option>
+          </select>
+        </p>
+        <button class="btn btn-accent" type="submit">Place order</button>
+        <p class="meta">No payment is processed. Nothing leaves this browser.</p>
+      </form>
+      <aside class="panel">
+        <p class="footer-h">Order</p>
+        <div data-summary></div>
+      </aside>
+    </div>
+    <div class="thanks wrap" data-thanks hidden>
+      <h2>Order received</h2>
+      <p class="lede">This was a demo checkout. We did not take a card, and we will not ship a parcel.</p>
+      <p><a class="btn" href="catalog.html">Back to the shop</a></p>
+    </div>
   </main>
   <footer class="site-footer">
-    <div class="wrap">
-      <p>© <span data-year>2026</span> NovaCart · <a href="legal/cookies.html">Cookies</a></p>
+    <div class="wrap footer-grid">
+      <div>
+        <a class="brand" href="index.html">Nova<span>Cart</span></a>
+        <p>Everyday electronics for people who take the train, not the private jet.</p>
+      </div>
+      <div>
+        <p class="footer-h">Shop</p>
+        <a href="catalog.html">All products</a>
+        <a href="products/pulse-buds.html">Pulse Buds</a>
+      </div>
+      <div>
+        <p class="footer-h">Help</p>
+        <a href="about.html#shipping">Shipping &amp; returns</a>
+        <a href="legal/cookies.html">Cookies</a>
+      </div>
+      <div>
+        <p class="footer-h">Restocks</p>
+        <form class="newsletter" data-newsletter>
+          <label class="skip" for="nl">Email</label>
+          <input id="nl" type="email" required placeholder="you@email.com" autocomplete="email">
+          <button class="btn btn-accent" type="submit">Join</button>
+        </form>
+        <p class="meta" data-nl-msg></p>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>© <span data-year>2026</span> NovaCart · fictional shop · no real payments</p>
+      <p><a href="about.html#demo">Course demo</a></p>
     </div>
   </footer>
+  <script src="js/catalog.js"></script>
   <script src="js/store.js" defer></script>
 </body>
 </html>

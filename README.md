@@ -12,18 +12,24 @@ Students are project managers. They need real URLs (PDP, campaign landing, check
 
 | URL | Role |
 |-----|------|
-| `/` | Home — reasonably clean |
-| `/catalog.html` | Three SKUs |
-| `/products/pulse-buds.html` | PDP aligned with the GSC pack (`pulse-buds`) |
-| `/c/paid-social.html` | **Deliberately bad** Paid Social landing (LCP, contrast, duplicate H1, no alt, extra scripts) |
+| `/` | Home — Pulse Buds hero, funnel into the PDP |
+| `/catalog.html` | 12 SKUs (Audio / Charge / Home / Carry) |
+| `/products/pulse-buds.html` | Canonical PDP (GSC pack) |
+| `/products/volt-charger.html` · `nest-plug.html` · `loft-sleeve.html` | The other three teaching PDPs |
+| `/products/p.html?sku=` | The remaining eight SKUs |
+| `/c/paid-social.html` | **Deliberately bad** Paid Social landing (LCP, contrast, duplicate H1, no alt) |
 | `/cart.html` · `/checkout.html` | `localStorage` cart, demo checkout (no payment) |
 | `/legal/cookies.html` | Accept-only bar documented as a QA gap |
 
-Analytics **numbers** for the case still come from the Moodle pack. The live site sends hits to instructor GA4 (`G-DFD5LG0TBV` via gtag). GTM can replace gtag later without changing the property.
+Funnel events: `view_item` → `add_to_cart` → `begin_checkout`. Analytics **numbers** for the case still come from the Moodle pack. Hits go to instructor GA4 (`G-DFD5LG0TBV`). GTM can replace gtag later.
 
 ## Local
 
-Open `index.html` or serve the folder (`python3 -m http.server`). Relative links work on project Pages (`/novacart/`).
+```bash
+python3 -m http.server
+```
+
+Relative links also work on project Pages (`/novacart/`).
 
 ## License
 

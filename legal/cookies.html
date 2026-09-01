@@ -4,12 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cookies — NovaCart</title>
+  <meta name="description" content="NovaCart cookie notice. Analytics and ads cookies, Accept-only bar.">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFD5LG0TBV"></script>
   <script src="../js/ga4.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/site.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <p class="promo">Free EU shipping from <strong>€50</strong> · 2-year warranty · 30-day returns</p>
   <header class="site-header">
     <a class="brand" href="../index.html">Nova<span>Cart</span></a>
     <nav aria-label="Primary">
@@ -19,21 +24,21 @@
       <a class="cart-link" href="../cart.html">Cart <span data-cart-count>0</span></a>
     </nav>
   </header>
-  <main id="main" class="wrap">
+  <main id="main" class="wrap about-story">
     <p class="crumbs"><a href="../index.html">Home</a> / Cookies</p>
     <h1>Cookie notice</h1>
-    <p>This demo stores <code>novacart-consent</code> and <code>novacart-cart</code> in <code>localStorage</code>.</p>
-    <div class="banner">
-      <strong>Intentional gap for the QA unit:</strong> the bar only offers <em>OK</em>. There is no reject, no granular analytics vs ads, and no CMP. Document that in D3 — do not “fix” the banner unless the instructor asks.
+    <p>We store a cart (<code>novacart-cart</code>) and a consent flag (<code>novacart-consent</code>) in this browser. Google Analytics 4 also loads on every page.</p>
+    <p>The bar at the bottom of the site only offers <strong>OK</strong>. There is no reject, no split between analytics and ads, and no consent management platform.</p>
+    <div class="demo-note">
+      <p>That gap is intentional for the WEB Tools QA unit. Tags fire before you click OK. Document it in D3 — do not “fix” the banner unless the instructor asks.</p>
     </div>
-    <p>Tags currently load with the page (GA4 <code>G-DFD5LG0TBV</code>) even before you click OK. That is part of the QA gap — not a CMP.</p>
-    <p>When a real GTM container is installed, this page should list categories (necessary / analytics / marketing). It does not, yet.</p>
   </main>
   <footer class="site-footer">
-    <div class="wrap">
-      <p>© <span data-year>2026</span> NovaCart</p>
+    <div class="wrap footer-legal">
+      <p>© <span data-year>2026</span> NovaCart · <a href="../about.html#demo">Course demo</a></p>
     </div>
   </footer>
+  <script src="../js/catalog.js"></script>
   <script src="../js/store.js" defer></script>
 </body>
 </html>
